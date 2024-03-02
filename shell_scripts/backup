@@ -1,0 +1,5 @@
+# !/usr/bin/env bash
+
+# create a backup of the home directory
+
+tar -czf backup-$(date +"%Y_%m_%d").tar.gz ~/sandbox/DevOps_scripts

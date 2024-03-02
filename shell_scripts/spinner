@@ -1,0 +1,22 @@
+# !/usr/bin/env bash
+
+# declare array
+array=('-' '\' '|' '/')
+
+# loop until stopped
+while true; do
+    # for every element in the array
+    for c in "${array[@]}"; do
+
+    # man echo
+    # \-n     do not output the trailing newline
+    # \-e     enable interpretation of backslash escapes
+    echo \-en "\\r $c "
+
+    # wait for half a second
+    sleep .5
+
+    # close for
+    done
+# close while
+done

@@ -1,0 +1,18 @@
+#! /usr/bin/env bash
+
+url="https://en.wikipedia.org/wiki/Python_(genus)"
+
+curl $url | grep -Eo 'title="Python [A-Za-z]+'
+
+# curl "https://en.wikipedia.org/wiki/Python_(genus)" | grep -Eo 'title="Python [A-Za-z]+' | wc -l > species.txt
+
+
+declare -a list
+
+list=("alin" "george" "mihai")
+
+for i in ${list[@]}; do
+    echo "$i"
+done
+
+echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] [ERROR]: $*" >> script.log

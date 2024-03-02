@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+location=${1}
+url=https://wttr.in/${location}
+
+if [[ ${location} =~ [0-9] ]]; then
+    echo "Location must be a string"
+else
+    curl ${url}
+fi
